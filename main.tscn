@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci4l3j5d2ubhk"]
+
+[ext_resource type="PackedScene" uid="uid://daht4u7xeeb5g" path="res://character.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://botg1xotvwou1" path="res://grass.tscn" id="2_0xm2m"]
+
+[node name="Main" type="Node3D"]
+
+[node name="GoobleSnoop" parent="." instance=ExtResource("1_ig7tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.43601, 8.54769)
+
+[node name="Grass" parent="." instance=ExtResource("2_0xm2m")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.69398, 0.719994, 0, -0.719994, 0.69398, 8.01123, 9.25734, -3.8746)
+light_energy = 2.0

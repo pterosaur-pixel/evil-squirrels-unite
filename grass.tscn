@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://botg1xotvwou1"]
+
+[ext_resource type="PackedScene" uid="uid://bjd838btu5ga0" path="res://tree_1.tscn" id="1_kl2qe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlfo1"]
+albedo_color = Color(0.0196078, 0.517647, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mlfo1"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_mlfo1")
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kl2qe"]
+size = Vector3(60, 2, 60)
+
+[node name="Grass" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+mesh = SubResource("BoxMesh_mlfo1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+shape = SubResource("BoxShape3D_kl2qe")
+
+[node name="Tree1" parent="." instance=ExtResource("1_kl2qe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.95024, 0, 0)
+
+[node name="Tree2" parent="." instance=ExtResource("1_kl2qe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.875, 0, -17.5232)
+
+[node name="Tree3" parent="." instance=ExtResource("1_kl2qe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.7858, 0, 12.614)

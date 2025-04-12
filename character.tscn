@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://daht4u7xeeb5g"]
+
+[ext_resource type="Script" uid="uid://j420yaxj7so" path="res://character_body_3d.gd" id="1_pjt0s"]
+[ext_resource type="Script" uid="uid://cpdka22gpx53k" path="res://camera_3d.gd" id="2_wa5vi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7dm0k"]
+albedo_color = Color(0.464994, 0.699616, 0.307615, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ig7tw"]
+material = SubResource("StandardMaterial3D_7dm0k")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_0xm2m"]
+
+[node name="GoobleSnoop" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.43601, 6.54769)
+script = ExtResource("1_pjt0s")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.99947, 2.97327, 9.1812)
+script = ExtResource("2_wa5vi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.46499, 0)
+mesh = SubResource("CylinderMesh_ig7tw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45798, 0)
+shape = SubResource("CylinderShape3D_0xm2m")
