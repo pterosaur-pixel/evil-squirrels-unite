@@ -11,10 +11,8 @@ func _physics_process(_delta: float) -> void:
 		velocity.y = 50
 	move_and_slide()
 
-
 func _on_water_collider_area_entered(area: Area3D) -> void:
 	speed = 15
-
 
 func _on_water_collider_area_exited(area: Area3D) -> void:
 	speed = 30

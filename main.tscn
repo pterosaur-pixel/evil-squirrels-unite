@@ -19,7 +19,7 @@ transform = Transform3D(1, 0, 0, 0, 0.69398, 0.719994, 0, -0.719994, 0.69398, 8.
 light_energy = 2.0
 
 [node name="Water1" parent="." instance=ExtResource("3_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -60.1855)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -59.6727)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 collision_layer = 2
