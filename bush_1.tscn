@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://ca3aa7ej6lbx7"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_3kn03"]
+radius = 1.0
+height = 2.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3kn03"]
+albedo_color = Color(0, 0.396078, 0.121569, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_5vuy8"]
+radius = 0.75
+height = 1.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vuy8"]
+albedo_color = Color(0, 0.396078, 0.121569, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tedh1"]
+albedo_color = Color(0, 0.396078, 0.121569, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3kn03"]
+radius = 1.0
+height = 3.0
+
+[node name="Bush_1" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_3kn03")
+surface_material_override/0 = SubResource("StandardMaterial3D_3kn03")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.757, -0.25, 0)
+mesh = SubResource("SphereMesh_5vuy8")
+surface_material_override/0 = SubResource("StandardMaterial3D_5vuy8")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.802, -0.25, 0)
+mesh = SubResource("SphereMesh_5vuy8")
+surface_material_override/0 = SubResource("StandardMaterial3D_tedh1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_3kn03")

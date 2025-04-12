@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://botg1xotvwou1"]
+[gd_scene load_steps=6 format=3 uid="uid://botg1xotvwou1"]
 
 [ext_resource type="PackedScene" uid="uid://bjd838btu5ga0" path="res://tree_1.tscn" id="1_kl2qe"]
+[ext_resource type="PackedScene" uid="uid://ca3aa7ej6lbx7" path="res://bush_1.tscn" id="2_mw2ei"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlfo1"]
 albedo_color = Color(0.0196078, 0.517647, 0, 1)
@@ -30,4 +31,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.95024, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.875, 0, -17.5232)
 
 [node name="Tree3" parent="." instance=ExtResource("1_kl2qe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.7858, 0, 12.614)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7216, 0, 12.614)
+
+[node name="Bush_1" parent="." instance=ExtResource("2_mw2ei")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 9.41653, 0, 0)
+
+[node name="Bush_2" parent="." instance=ExtResource("2_mw2ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0472, 0, 15.3098)
+
+[node name="Bush_3" parent="." instance=ExtResource("2_mw2ei")]
+transform = Transform3D(1.29904, 0, -0.75, 0, 1.5, 0, 0.75, 0, 1.29904, 9.41653, 0, 20.3029)
