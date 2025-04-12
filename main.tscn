@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ci4l3j5d2ubhk"]
+[gd_scene load_steps=4 format=3 uid="uid://ci4l3j5d2ubhk"]
 
 [ext_resource type="PackedScene" uid="uid://daht4u7xeeb5g" path="res://character.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://botg1xotvwou1" path="res://grass.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://dculv5u2g77i1" path="res://water_1.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node3D"]
 
@@ -13,3 +14,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.43601, 8.54769)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.69398, 0.719994, 0, -0.719994, 0.69398, 8.01123, 9.25734, -3.8746)
 light_energy = 2.0
+
+[node name="Water1" parent="." instance=ExtResource("3_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -60.1855)

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ca3aa7ej6lbx7" path="res://bush_1.tscn" id="2_mw2ei"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlfo1"]
-albedo_color = Color(0.0196078, 0.517647, 0, 1)
+albedo_color = Color(0.0196078, 0.439216, 0, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_mlfo1"]
 resource_local_to_scene = true
