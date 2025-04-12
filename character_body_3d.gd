@@ -8,4 +8,5 @@ func _physics_process(_delta: float) -> void:
 	velocity.x = direction * 30
 	if Input.is_action_just_pressed("jump"):
 		velocity.y += 50
+		
 	move_and_slide()
