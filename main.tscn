@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ci4l3j5d2ubhk"]
+[gd_scene load_steps=6 format=3 uid="uid://ci4l3j5d2ubhk"]
 
 [ext_resource type="PackedScene" uid="uid://daht4u7xeeb5g" path="res://character.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://botg1xotvwou1" path="res://grass.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://dculv5u2g77i1" path="res://water_1.tscn" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://cpdka22gpx53k" path="res://camera_3d.gd" id="4_1bvp3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h2yge"]
 size = Vector3(2, 20, 120)
@@ -10,7 +11,7 @@ size = Vector3(2, 20, 120)
 [node name="Main" type="Node3D"]
 
 [node name="GoobleSnoop" parent="." instance=ExtResource("1_ig7tw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.43601, 8.54769)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.779436, 8.54769)
 
 [node name="Grass" parent="." instance=ExtResource("2_0xm2m")]
 
@@ -55,3 +56,7 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.9397, 10, -17.4582)
 shape = SubResource("BoxShape3D_h2yge")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.961703, 0, 0.274094, 0, 1, 0, -0.274094, 0, 0.961703, 5.17289, 1.96071, 13.3276)
+script = ExtResource("4_1bvp3")

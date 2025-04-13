@@ -10,7 +10,7 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("jump"):
 		velocity.y = 50
 	move_and_slide()
-
+	print(global_position)
 func _on_water_collider_area_entered(area: Area3D) -> void:
 	speed = 15
 

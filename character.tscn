@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://daht4u7xeeb5g"]
+[gd_scene load_steps=22 format=3 uid="uid://daht4u7xeeb5g"]
 
 [ext_resource type="Script" uid="uid://j420yaxj7so" path="res://character_body_3d.gd" id="1_pjt0s"]
-[ext_resource type="Script" uid="uid://cpdka22gpx53k" path="res://camera_3d.gd" id="2_wa5vi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7dm0k"]
 albedo_color = Color(0.464994, 0.699616, 0.307615, 1)
@@ -13,22 +12,76 @@ material = SubResource("StandardMaterial3D_7dm0k")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_pjt0s"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_pjt0s"]
+radius = 0.75
+height = 1.75
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pjt0s"]
+albedo_color = Color(0.574629, 0.452709, 0.297632, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_pjt0s"]
+radius = 1.0
+height = 0.75
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wa5vi"]
+albedo_color = Color(0.313753, 0.224145, 0.115438, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_pjt0s"]
+top_radius = 0.15
+bottom_radius = 0.2
+height = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wfnr8"]
+albedo_color = Color(0.276488, 0.190717, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_wa5vi"]
+radius = 0.3
+height = 0.6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0qfo5"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_wfnr8"]
+radius = 0.3
+height = 0.6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yxww1"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_px5sl"]
+radius = 0.15
+height = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_px5sl"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_0qfo5"]
+radius = 0.15
+height = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wdpcj"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_wa5vi"]
+top_radius = 0.2
+bottom_radius = 0.1
+height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qi5as"]
+albedo_color = Color(0.278431, 0.192157, 0, 1)
+
 [node name="GoobleSnoop" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.43601, 6.54769)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_pjt0s")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.99947, 2.97327, 9.1812)
-script = ExtResource("2_wa5vi")
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.46499, 0)
+visible = false
 mesh = SubResource("CylinderMesh_ig7tw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45798, 0)
+visible = false
 shape = SubResource("CylinderShape3D_0xm2m")
 
 [node name="WaterCollider" type="Area3D" parent="."]
@@ -38,6 +91,51 @@ collision_mask = 4
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="WaterCollider"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.458, 0)
 shape = SubResource("CylinderShape3D_pjt0s")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.46499, 0)
+mesh = SubResource("CapsuleMesh_pjt0s")
+surface_material_override/0 = SubResource("StandardMaterial3D_pjt0s")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.97644, 0)
+mesh = SubResource("SphereMesh_pjt0s")
+surface_material_override/0 = SubResource("StandardMaterial3D_wa5vi")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.35279, 0)
+mesh = SubResource("CylinderMesh_pjt0s")
+surface_material_override/0 = SubResource("StandardMaterial3D_wfnr8")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.273994, 1.5087, -0.442938)
+mesh = SubResource("SphereMesh_wa5vi")
+surface_material_override/0 = SubResource("StandardMaterial3D_0qfo5")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.144152, 1.50719, -0.497224)
+mesh = SubResource("SphereMesh_wfnr8")
+surface_material_override/0 = SubResource("StandardMaterial3D_yxww1")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.353965, 1.50384, -0.658836)
+mesh = SubResource("SphereMesh_px5sl")
+surface_material_override/0 = SubResource("StandardMaterial3D_px5sl")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.198095, 1.51471, -0.741408)
+mesh = SubResource("SphereMesh_0qfo5")
+surface_material_override/0 = SubResource("StandardMaterial3D_wdpcj")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.391851, 0.847921, 0.0862465)
+mesh = SubResource("CylinderMesh_wa5vi")
+surface_material_override/0 = SubResource("StandardMaterial3D_qi5as")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.392091, 0.847921, 0.0253239)
+mesh = SubResource("CylinderMesh_wa5vi")
+surface_material_override/0 = SubResource("StandardMaterial3D_qi5as")
 
 [connection signal="area_entered" from="WaterCollider" to="." method="_on_water_collider_area_entered"]
 [connection signal="area_exited" from="WaterCollider" to="." method="_on_water_collider_area_exited"]
