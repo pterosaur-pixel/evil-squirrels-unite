@@ -63,7 +63,7 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="CylinderMesh" id="CylinderMesh_wa5vi"]
 top_radius = 0.2
 bottom_radius = 0.1
-height = 1.0
+height = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qi5as"]
 albedo_color = Color(0.278431, 0.192157, 0, 1)
@@ -135,13 +135,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.198095, 1.51471, -0.741408
 mesh = SubResource("SphereMesh_0qfo5")
 surface_material_override/0 = SubResource("StandardMaterial3D_wdpcj")
 
-[node name="MeshInstance3D9" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.391851, 0.847921, 0.0862465)
+[node name="Leg1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.263804, 0.754146, 0.0862465)
 mesh = SubResource("CylinderMesh_wa5vi")
 surface_material_override/0 = SubResource("StandardMaterial3D_qi5as")
 
-[node name="MeshInstance3D10" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.392091, 0.847921, 0.0253239)
+[node name="Leg2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.231707, 0.754, 0.0250001)
 mesh = SubResource("CylinderMesh_wa5vi")
 surface_material_override/0 = SubResource("StandardMaterial3D_qi5as")
 
