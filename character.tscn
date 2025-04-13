@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://daht4u7xeeb5g"]
+[gd_scene load_steps=24 format=3 uid="uid://daht4u7xeeb5g"]
 
 [ext_resource type="Script" uid="uid://j420yaxj7so" path="res://character_body_3d.gd" id="1_pjt0s"]
 
@@ -68,6 +68,14 @@ height = 1.0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qi5as"]
 albedo_color = Color(0.278431, 0.192157, 0, 1)
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_glpr6"]
+top_radius = 0.15
+bottom_radius = 0.15
+height = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_glpr6"]
+albedo_color = Color(0, 0, 0, 1)
+
 [node name="GoobleSnoop" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.43601, 6.54769)
 collision_layer = 3
@@ -136,6 +144,11 @@ surface_material_override/0 = SubResource("StandardMaterial3D_qi5as")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.392091, 0.847921, 0.0253239)
 mesh = SubResource("CylinderMesh_wa5vi")
 surface_material_override/0 = SubResource("StandardMaterial3D_qi5as")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.993397, -0.106636, -0.0423258, 0, 0.36892, -0.929461, 0.114729, 0.923324, 0.366484, 0.087, 1.13, -0.46)
+mesh = SubResource("CylinderMesh_glpr6")
+surface_material_override/0 = SubResource("StandardMaterial3D_glpr6")
 
 [connection signal="area_entered" from="WaterCollider" to="." method="_on_water_collider_area_entered"]
 [connection signal="area_exited" from="WaterCollider" to="." method="_on_water_collider_area_exited"]
